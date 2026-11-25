@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AllegiaantHub — Claim Free Key</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="boot" class="screen boot">
+    <div class="boot-inner">
+      <div class="logo-mark">
+        <span class="logo-a">A</span>
+      </div>
+      <h1 class="logo-text"><span class="black">CLAIM</span> <span class="orange">FREE KEY</span></h1>
+      <p class="boot-sub">AllegiaantHub · preparing station</p>
+      <div class="bar-wrap">
+        <div class="bar" id="bootBar"></div>
+      </div>
+      <p class="boot-pct" id="bootPct">0%</p>
+    </div>
+  </div>
+
+  <div id="select" class="screen select hidden">
+    <header class="top">
+      <div class="logo-mark sm">
+        <span class="logo-a">A</span>
+      </div>
+      <h1 class="logo-text sm"><span class="black">CLAIM</span> <span class="orange">FREE KEY</span></h1>
+    </header>
+    <p class="hint">Pilih script yang mau di-claim key-nya</p>
+    <div class="grid" id="scriptGrid"></div>
+  </div>
+
+  <div id="claim" class="screen claim hidden">
+    <header class="top">
+      <button type="button" class="back" id="btnBack" aria-label="Kembali">←</button>
+      <div class="logo-mark sm">
+        <span class="logo-a">A</span>
+      </div>
+      <h1 class="logo-text sm"><span class="black">CLAIM</span> <span class="orange">FREE KEY</span></h1>
+    </header>
+
+    <div class="card">
+      <div class="script-head">
+        <img id="scriptIcon" class="script-icon" alt="" />
+        <div>
+          <h2 id="scriptName">—</h2>
+          <p id="scriptMeta" class="meta">Roblox · key 24j · 12x / hari</p>
+        </div>
+      </div>
+
+      <div class="quota" id="quotaBox">
+        <span>Sisa claim hari ini</span>
+        <strong id="quotaLeft">12 / 12</strong>
+      </div>
+
+      <div class="timer-row">
+        <button type="button" class="btn primary" id="btnStart">MULAI</button>
+        <div class="timer" id="timerDisplay">00:00</div>
+      </div>
+
+      <div class="key-zone" id="keyZone">
+        <p class="key-label">Key kamu</p>
+        <div class="keybox">
+          <code id="keyValue">—</code>
+          <button type="button" class="btn copy" id="btnCopy" disabled>SALIN</button>
+        </div>
+        <p class="key-note" id="keyNote">Klik MULAI, tunggu timer selesai. Key real, no fake.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="music-dock" id="musicDock">
+    <button type="button" class="music-toggle" id="btnMusic" title="Music on/off" aria-label="Toggle music">
+      <span class="icon-on">♪</span>
+      <span class="icon-off hidden">🔇</span>
+    </button>
+    <button type="button" class="music-nav" id="btnPrev" title="Previous" aria-label="Previous track">‹</button>
+    <div class="music-info">
+      <span id="trackName">—</span>
+      <span id="trackIndex">0 / 0</span>
+    </div>
+    <button type="button" class="music-nav" id="btnNext" title="Next" aria-label="Next track">›</button>
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
